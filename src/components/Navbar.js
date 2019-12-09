@@ -7,7 +7,7 @@ export default function Navbar() {
             <ul className="navbar-nav align-items-center">
                 <li className="nav-item ml-5">
                     <Link to="/">
-                        <span className="text-light font-weight-bold">Main Page</span>
+                        <i className="fas fa-chevron-left navbar-brand text-white" />
                     </Link>
                 </li>
                 <li className="nav-item ml-5">
