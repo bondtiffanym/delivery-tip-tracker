@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function Deliveries() {
-    
+export default function Deliveries({delivery}) {
+    const {address, tip} = delivery;
 
     return (
-        <div>
-            <p>Hello from deliveries</p>
-        </div>
+        <li>
+            <div>
+                <span className="mx-4">Address: {address}</span>
+                <span>Tip: ${tip}</span>
+            </div>
+        </li>
     )
 }

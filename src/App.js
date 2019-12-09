@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -6,14 +6,15 @@ import DeliveryList from './components/DeliveryList';
 import Settings from './components/Settings';
 import ErrorPage from './components/ErrorPage';
 import AddDelivery from './components/AddDelivery';
-import logo from './logo.svg';
+import DeliveryContextProvider from './Context';
 import './App.css';
 
 function App() {
 
-
   return (
     <React.Fragment>
+      <DeliveryContextProvider>
+
       <Navbar />
 
       <Switch>
@@ -22,6 +23,8 @@ function App() {
         <Route path="/settings" component={Settings} />
         <Route component={ErrorPage} />
       </Switch>
+
+      </DeliveryContextProvider>
     </React.Fragment>
   );
 }
