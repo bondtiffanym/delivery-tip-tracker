@@ -10,13 +10,16 @@ export default function DeliveryList() {
     return (
         
         <div className="container container-fluid mx-auto">
-           <h1 className="text-center my-4">Hello from Delivery List!</h1>
+           <h1 className="text-center my-4">Delivery Tracker</h1>
             
             <div className="text-right my-4">
             <Link to="/add" className="font-weight-bold">
-                <button className="btn btn-outline-primary text-center">Add New Delivery <i className="fas fa-plus-circle"></i>
+                <button className="btn badge-pill badge-primary text-center"><i className="fas fa-plus mr-1"></i>New Delivery
                 </button>
             </Link>
+            {deliveries.length > 0 && 
+            <button className="btn badge-pill badge-danger text-center ml-2"><i className="far fa-trash-alt mr-1"></i>Clear All</button>}
+            
             </div>
 
             <ul style={{'listStyleType': 'none'}} className="mx-auto">
