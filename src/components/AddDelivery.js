@@ -12,10 +12,10 @@ export default function AddDelivery() {
         <div className="container container-fluid mx-auto my-4">
 
             {/* Dismissable Alert hidden until settings have been updated */}
-            <div class="alert alert-danger alert-dismissible fade show d-none" role="alert" 
+            <div className="alert alert-danger alert-dismissible fade show d-none" role="alert" 
             id="add-delivery-alert">
                 <button type="button" 
-                class="close" 
+                className="close" 
                 aria-label="Close" 
                 onClick={() => {
                     document.getElementById('add-delivery-alert').classList.add('d-none');

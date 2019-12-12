@@ -12,10 +12,10 @@ export default function Settings() {
         <div className="container container-fluid mx-auto my-4">
 
             {/* Dismissable Alert hidden until settings have been updated */}
-            <div class="alert alert-success alert-dismissible fade show d-none" role="alert" 
+            <div className="alert alert-success alert-dismissible fade show d-none" role="alert" 
             id="settings-alert">
                 <button type="button" 
-                class="close" 
+                className="close" 
                 aria-label="Close" 
                 onClick={() => {
                     document.getElementById('settings-alert').classList.add('d-none');
@@ -63,9 +63,11 @@ export default function Settings() {
                                     onClick={() => { 
                                         document.getElementById('settings-alert').classList.remove('d-none');
                                         setMileageRate(mileage);
-                                        if (bonus > 0) {
-                                            addBonusMileage(bonus); 
-                                        }   
+                                        if (bonus === "") {
+                                            addBonusMileage(0.00);
+                                        } else {
+                                            addBonusMileage(bonus);
+                                        }
                                     }}
                                     className="btn btn-outline-success mx-2">Submit</button>
                                 </div>

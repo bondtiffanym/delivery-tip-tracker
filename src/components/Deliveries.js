@@ -3,7 +3,7 @@ import { DeliveryContext } from '../Context';
 
 export default function Deliveries({delivery}) {
     const {address, tip, id} = delivery;
-    const { setSelectedDelivery } = useContext(DeliveryContext);
+    const { setSelectedDelivery, deleteDelivery } = useContext(DeliveryContext);
 
     return (
         <li className="list-group-item list-group-item-action list-group-item-success my-1">
@@ -13,11 +13,8 @@ export default function Deliveries({delivery}) {
                 <span>
                     <button className="btn p-0"
                     onClick={() => {
-                        setSelectedDelivery(id);
-                    }}><i className="far fa-edit text-muted mx-1"></i></button>
-                    <button className="btn p-0"
-                    onClick={() => {
-                        setSelectedDelivery(id);
+                       setSelectedDelivery(id);
+                        deleteDelivery(id);
                     }}><i className="far fa-trash-alt text-danger mx-1"></i></button>
                 </span>
             </div>

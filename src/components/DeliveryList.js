@@ -18,7 +18,8 @@ export default function DeliveryList() {
                 </button>
             </Link>
             {deliveries.length > 0 && 
-            <button className="btn badge-pill badge-danger text-center ml-2"><i className="far fa-trash-alt mr-1"></i>Clear All</button>}
+            <button className="btn badge-pill badge-danger text-center ml-2"
+            data-toggle="modal" data-target="#clear-all-modal"><i className="far fa-trash-alt mr-1"></i>Clear All</button>}
             
             </div>
 

@@ -7,6 +7,7 @@ import Settings from './components/Settings';
 import ErrorPage from './components/ErrorPage';
 import AddDelivery from './components/AddDelivery';
 import DeliveryContextProvider from './Context';
+import Modals from './components/Modals';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <DeliveryContextProvider>
 
       <Navbar />
+      <Modals />
 
       <Switch>
         <Route exact path="/" component={DeliveryList} />

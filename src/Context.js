@@ -74,6 +74,16 @@ class DeliveryContextProvider extends Component {
     setSelectedDelivery = (id) => {
         this.setState({selectedDelivery: id}, () => console.log(this.state.selectedDelivery));
     }
+    deleteDelivery = (id) => {
+       let deliveryList = [...this.state.deliveries];
+       let newDeliveryList = deliveryList.filter( i => i.id !== id ); 
+
+       this.setState({deliveries: [...newDeliveryList]})
+    }
+    clearAllDeliveries = () => {
+        this.setState({deliveries: [], totalTips: 0 })
+    }
+
 
 
 
@@ -89,7 +99,9 @@ class DeliveryContextProvider extends Component {
             addTip:this.addTip,
             setMileageRate: this.setMileageRate,
             addBonusMileage: this.addBonusMileage,
-            setSelectedDelivery: this.setSelectedDelivery}}>
+            setSelectedDelivery: this.setSelectedDelivery,
+            deleteDelivery: this.deleteDelivery,
+            clearAllDeliveries: this.clearAllDeliveries}}>
                 {this.props.children}
             </DeliveryContext.Provider>
          );
