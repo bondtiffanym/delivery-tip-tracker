@@ -5,7 +5,7 @@ export default function Totals() {
     const {totalTips, deliveries, mileageRate, bonusMileage } = useContext(DeliveryContext);
     let totalEarned = (parseFloat(bonusMileage) + totalTips + (mileageRate * deliveries.length)).toFixed(2);
     return (
-        <div className="card-deck ml-4 justify-content-between">
+        <div className="card-deck ml-4 mb-5 justify-content-between">
   <div className="card">
     <div className="card-header font-weight-bold text-center">Tips & Take Home</div>
     <div className="card-body text-right">
