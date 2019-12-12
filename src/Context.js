@@ -6,24 +6,10 @@ export const DeliveryContext = createContext();
 
 class DeliveryContextProvider extends Component {
     state = { 
-        deliveries: [
-            {
-            address: '1138 Lucas Ln',
-            id: uuid.v4(),
-            tip: 5.00
-        }, {
-            address: '123 Smith Rd',
-            id: uuid.v4(),
-            tip: 2.00
-        }, {
-            address: '456 Rosie Dr',
-            id: uuid.v4(),
-            tip: 6.00
-        } 
-        ],
-        totalTips: 13.00,
-        mileageRate: 2.15,
-        bonusMileage: 0,
+        deliveries: [],
+        totalTips: 0.00,
+        mileageRate: 0.00,
+        bonusMileage: 0.00,
         selectedDelivery: "",
      };
 

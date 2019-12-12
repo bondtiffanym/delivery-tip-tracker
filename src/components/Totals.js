@@ -18,7 +18,7 @@ export default function Totals() {
     <div className="card-header text-center font-weight-bold">Deliveries & Mileage</div>
     <div className="card-body text-right">
       <p className="card-text">Total Deliveries: {deliveries.length}</p>
-    <p className="card-text">Total Mileage: ${parseFloat(mileageRate * deliveries.length + bonusMileage).toFixed(2)}</p>
+    <p className="card-text">Total Mileage: ${parseFloat(mileageRate * deliveries.length).toFixed(2)}</p>
     <p className="card-text">Bonus Mileage: ${parseFloat(bonusMileage).toFixed(2)}</p>
     </div>
   </div>
